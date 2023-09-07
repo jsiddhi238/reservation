@@ -26,34 +26,10 @@ void displayAvailableSeats() {
     printf("\n");
 }
 
-// Reserve a seat
-void bookSeat(int seatNumber) {
-    if (seatNumber >= 1 && seatNumber <= MAX_SEATS) {
-        if (seats[seatNumber - 1]) {
-            seats[seatNumber - 1] = false;
-            printf("Seat %d booked successfully!\n", seatNumber);
-        } else {
-            printf("Seat %d is already booked.\n", seatNumber);
-        }
-    } else {
-        printf("Invalid seat number.\n");
-    }
-}
 
-// Cancel a reservation
-void cancelSeat(int seatNumber) {
-    if (seatNumber >= 1 && seatNumber <= MAX_SEATS) {
-        if (!seats[seatNumber - 1]) {
-            seats[seatNumber - 1] = true;
-            printf("Reservation for seat %d canceled.\n", seatNumber);
-        } else {
-            printf("Seat %d is not booked.\n", seatNumber);
-        }
-    } else {
-        printf("Invalid seat number.\n");
-    }
-}
 
+
+    
 int main() {
     int choice, seatNumber;
 
